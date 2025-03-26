@@ -1,0 +1,75 @@
+$primary-color: #5359cd;
+$light-bg: #f9f9f9;
+$border-color: #ddd;
+
+.employee-container {
+    width: 100%;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
+    .employeeButtonContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+        .addEmployeeButton {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #5359cd;
+            padding: 8px 12px;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .plusIcon {
+                font-size: 48px;
+            }
+        }
+    }
+
+
+    .employee-table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid $border-color;
+            text-align: left;
+        }
+
+        th {
+            background: $primary-color;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: $light-bg;
+        }
+
+        .actionButtons {
+            display: flex;
+            gap: 20px;
+
+            .editIcon,
+            .deleteIcon {
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.2);
+                    transition: transform 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}

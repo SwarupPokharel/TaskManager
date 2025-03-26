@@ -1,0 +1,80 @@
+$primary: #5359cd;
+$green: #28a745;
+$orange: #f39c12;
+$red: #e74c3c;
+$light-bg: #f5f5f5;
+
+.dashboard {
+  width: 100%;
+  text-align: center;
+  margin: 40px auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+
+  h1 {
+    place-content: center;
+    color: $primary;
+  }
+
+  h3{
+    margin: 0.5rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+
+  .card {
+    font-size: 1rem;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    max-width: 250px;
+    min-width: 200px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+
+    }
+
+    .icon{
+      place-self: center;
+      font-size: 3rem;
+    }
+
+    h4{
+      font-size: 1.2rem;
+    }
+  }
+
+  .blue {
+    background: linear-gradient(25deg, #162c79 10%, #415499 50%, #162c79 100%);
+  }
+
+  .green {
+    background: linear-gradient(155deg, #1e7733 10%, #2bb24a 50%, #1e7733 100%);
+  }
+
+  .orange {
+    background: linear-gradient(155deg, #e89700 10%, #ffbb3c 50%, #e89700 100%);
+  }
+
+  .red {
+    background: linear-gradient(155deg, #b22b39 10%, #f54658 50%, #b22b39 100%);
+  }
+
+  .purple {
+    background: linear-gradient(25deg, #543391 10%, #804de0 50%, #543391 100%);
+  }
+
+  .teal {
+    background: linear-gradient(25deg, #178f6b 10%, #20c997 50%, #178f6b 100%);
+  }
+
+}

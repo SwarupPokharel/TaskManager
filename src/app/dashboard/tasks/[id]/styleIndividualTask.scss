@@ -1,0 +1,261 @@
+.taskDetailContainer {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    .titleAndPriority {
+        display: grid;
+        grid-template-columns: 250px 450px 250px 1fr;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+
+        .titleGridItem {
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+            padding: 15px;
+
+            .priorityButton {
+                padding: 5px 20px;
+                border-radius: 5px;
+                text-transform: capitalize;
+
+                &.highPriority {
+                    background-image: linear-gradient(147deg, #ff0400 0%, #d52c29 74%);
+                    color: #fff;
+                }
+
+                &.mediumPriority {
+                    background-image: linear-gradient(147deg, #ffff00 0%, #f4f40e 74%);
+                }
+
+                &.lowPriority {
+                    background-image: linear-gradient(147deg, #00ff00 0%, #0abf0a 74%);
+                }
+            }
+        }
+
+        .titleGridItem:nth-child(odd) {
+            font-weight: bold;
+        }
+
+        .titleGridItem:last-child {
+            text-align: center;
+            border: none;
+        }
+
+    }
+
+    .taskDescription {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-top: none;
+
+        .descGridItem {
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+            padding: 15px;
+        }
+
+        .descGridItem:last-child {
+            border: none;
+        }
+
+    }
+
+    .descGridItem:nth-child(odd) {
+        font-weight: bold;
+    }
+
+    .taskDate {
+        display: grid;
+        grid-template-columns: 250px 1fr 250px 1fr;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-top: none;
+
+        .dateItem {
+            padding: 15px;
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        .dateItem:last-child {
+            border: none;
+        }
+    }
+
+    .dateItem:nth-child(odd) {
+        font-weight: bold;
+    }
+
+    .taskStatus {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-top: none;
+
+
+        .status {
+            padding: 15px;
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+
+            .statusText {
+                display: inline;
+                text-transform: capitalize;
+                padding: 3px 8px;
+                border-radius: 5px;
+
+                &.assignedTask {
+                    color: #fff;
+                    background-color: teal;
+                }
+
+                &.inProgressTask {
+                    background-color: yellowgreen;
+                }
+
+                &.completedTask {
+                    background-color: #26da7a;
+                    color: #fff;
+                }
+            }
+        }
+
+        .status:nth-child(odd) {
+            font-weight: bold;
+        }
+
+        .status:last-child {
+            border: none;
+        }
+    }
+
+    .actionContainer {
+        margin-top: 30px;
+        place-self: center;
+
+        .action {
+            border: none;
+            padding: 8px 25px;
+            border-radius: 5px;
+            background-color: #5359cd;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #3b42be;
+            }
+        }
+    }
+
+    .dialogContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .dialogContent {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 50%;
+            padding: 20px 0;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-top: 50px;
+
+            .dialogHeader {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: space-between;
+                padding: 0 20px 20px 20px;
+
+                h1 {
+                    margin: 0;
+                    color: #5359cd;
+                }
+
+                span {
+                    .closeIcon {
+                        width: 16px;
+                        height: 16px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .mainContent {
+                margin: 0 20px 10px 20px;
+
+                .textareaContainer {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-bottom: 20px;
+                }
+
+                .statusContainer {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-bottom: 20px;
+
+                    .statusSelect {
+                        padding: 10px 0;
+                        outline: none;
+
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 20px;
+
+                    .cancelButton,
+                    .submitButton {
+                        padding: 8px 15px;
+                        border-radius: 5px;
+                        border: none;
+                        cursor: pointer;
+                        transition: all 0.2s ease-in-out;
+                    }
+
+                    .cancelButton {
+                        border: 2px solid;
+                        background-color: #fff;
+                        color: #5359cd;
+
+                        &:hover{
+                            background-color: #5359cd;
+                            color: #fff;
+                        }
+                    }
+                    .submitButton{
+                        color: #fff;
+                        background-color: #5359cd;
+
+                        &:hover{
+                            background-color: #3b42be;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+}

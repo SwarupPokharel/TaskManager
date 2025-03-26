@@ -1,0 +1,59 @@
+$primary-color: #5359cd;
+$button-color: #5359cd;
+$button-hover: #3b42be;
+$light-bg: #f5f5f5;
+
+.container {
+    padding: 2rem;
+    background: $light-bg;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        color: $primary-color;
+    }
+}
+
+.taskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    label {
+        font-weight: bold;
+        text-align: left;
+    }
+
+    input,
+    textarea,
+    select {
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    button {
+        padding: 0.75rem;
+        background: $button-color;
+        color: white;
+        border: none;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+            background: $button-hover;
+        }
+    }
+}
