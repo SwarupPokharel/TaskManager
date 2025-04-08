@@ -3,17 +3,17 @@
   color: white;
   scroll-behavior: smooth;
   position: fixed;
-  width: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-  .navbar-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+  @media (max-width:768px) {
+    justify-content: space-between;
+    padding: 0 20px;
   }
 
   .logo {
-    width: fit-content;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
@@ -150,9 +150,6 @@
 
 
   @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
 
     .nav-links {
       display: none;

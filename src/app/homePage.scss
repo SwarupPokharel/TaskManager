@@ -2,71 +2,26 @@ $primary-color: #5359cd;
 $text-color: #333;
 $button-hover: #393dcd;
 
-.main {
-  display: flex;
-  flex-direction: column;
-
-  .featuresTitle {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: $primary-color;
-  }
-
-  .featureGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3.5rem;
-    margin-top: 2rem;
-    padding: 0 2rem;
-
-
-    .featureCard {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-      h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
-
-      p {
-        font-size: 1rem;
-        color: $text-color;
-      }
-
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-      }
-    }
-  }
-}
-
 .home {
   margin: 0 10%;
   text-align: center;
   min-height: 100vh;
-}
-
-.hero {
-  box-sizing: border-box;
-  height: 100vh;
-  margin-top: 5rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 
-  h1 {
-    font-size: 2.5rem;
-    color: $primary-color;
-  }
-
-  .heroImageContainer {
+  .hero {
+    height: 100vh;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
     display: flex;
     align-items: center;
     gap: 50px;
+    box-sizing: border-box;
+
+    h1 {
+      font-size: 2.5rem;
+      color: $primary-color;
+    }
 
     .description {
       display: flex;
@@ -78,6 +33,23 @@ $button-hover: #393dcd;
         color: $text-color;
         text-align: center;
       }
+
+      .ctaButton {
+        width: fit-content;
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: $primary-color;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 1rem;
+        transition: background 0.3s;
+
+        &:hover {
+          background: $button-hover;
+        }
+      }
     }
 
     .heroImage {
@@ -85,80 +57,178 @@ $button-hover: #393dcd;
       height: 500px;
       object-fit: cover;
     }
-  }
 
-  .ctaButton {
-    width: fit-content;
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: $primary-color;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-    transition: background 0.3s;
+    @media (max-width: 1024px) {
+      .heroImage {
+        display: none;
+      }
 
-    &:hover {
-      background: $button-hover;
+      .description {
+        .ctaButton {
+          padding: 0.50rem 1rem;
+        }
+      }
     }
   }
-}
 
-.features {
-  min-height: 100vh;
-  margin: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
-}
+  .features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem 0;
+    height: 100vh;
 
-.techStack {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  min-height: 100vh;
-
-  @media (max-width: 768px) {
-    .featureGrid {
-      grid-template-columns: 1fr;
-      padding: 0 1rem;
-    }
-  }
-}
-
-
-.about {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
-
-
-  .aboutText {
-    text-align: center;
-
-    h2 {
+    .featuresTitle {
       font-size: 2.5rem;
-      margin-bottom: 2rem;
+      font-weight: bold;
       color: $primary-color;
     }
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #555;
-      margin-bottom: 1.5rem;
+    .featureGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3.5rem;
+      margin: 2rem 0;
+      padding: 0 2rem;
+
+      .featureCard {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+          color: $text-color;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+      }
     }
   }
 
-  .aboutImage {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
+  .techStack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem 0;
+    height: 100vh;
+
+    .featuresTitle {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    .featureGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3.5rem;
+      margin: 2rem 0;
+      padding: 0 2rem;
+
+      .featureCard {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+          color: $text-color;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+
+  }
+
+
+  .about {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 3rem;
+
+    @media (max-width: 1024px) {
+      height: 100%;
+
+      .aboutImage {
+        display: none;
+      }
+    }
+
+    .aboutImage {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .aboutText {
+      text-align: center;
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: $primary-color;
+
+        @media (max-width:768px) {
+          font-size: 2rem;
+        }
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    .features,
+    .techStack {
+      .featuresTitle {
+        font-size: 2rem;
+      }
+
+      .featureGrid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+
+    .hero,
+    .features,
+    .techStack,
+    .about {
+      height: 100%;
+    }
   }
 }

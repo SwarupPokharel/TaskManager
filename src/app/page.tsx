@@ -11,7 +11,6 @@ export default function Home() {
   <Navbar />
   <main className="home" id="home">
     <section className='hero'>
-      <div className="heroImageContainer">
         <div className="description">
           <h1>Manage Your Tasks Efficiently</h1>
           <p>Take control of your daily workflow with our intuitive task management system.
@@ -27,7 +26,6 @@ export default function Home() {
           alt='hero image'
           className='heroImage'
         />
-      </div>
     </section>
 
     <section className='features' id="features">

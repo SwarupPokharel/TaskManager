@@ -1,0 +1,87 @@
+.loginContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #1e1e2f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.loginContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+.loginContainer form .loginLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #5359cd;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.loginContainer form label {
+  font-weight: bold;
+  color: #fff;
+}
+.loginContainer form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+.loginContainer form input:focus {
+  outline: none;
+}
+.loginContainer form button {
+  margin-top: 15px;
+  background-color: #5359cd;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.loginContainer form button:hover {
+  background-color: #3b42be;
+}
+.loginContainer form button.loading {
+  transition: background 0.3s ease;
+  background-color: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.loginContainer form a {
+  width: -moz-fit-content;
+  width: fit-content;
+  place-self: center;
+  color: #5359cd;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.loginContainer form a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.loginContainer .message {
+  text-align: center;
+}
+.loginContainer .message.error {
+  color: red;
+}
+.loginContainer .message.success {
+  color: green;
+}/*# sourceMappingURL=loginStyle.css.map */

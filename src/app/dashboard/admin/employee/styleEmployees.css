@@ -1,0 +1,60 @@
+.employee-container {
+  width: 100%;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.employee-container .employeeButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.employee-container .employeeButtonContainer .addEmployeeButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #5359cd;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.employee-container .employeeButtonContainer .addEmployeeButton:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+.employee-container .employeeButtonContainer .addEmployeeButton .plusIcon {
+  font-size: 48px;
+}
+.employee-container .employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.employee-container .employee-table th,
+.employee-container .employee-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.employee-container .employee-table th {
+  background: #5359cd;
+  color: white;
+}
+.employee-container .employee-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+.employee-container .employee-table .actionButtons {
+  display: flex;
+  gap: 20px;
+}
+.employee-container .employee-table .actionButtons .editIcon,
+.employee-container .employee-table .actionButtons .deleteIcon {
+  cursor: pointer;
+}
+.employee-container .employee-table .actionButtons .editIcon:hover,
+.employee-container .employee-table .actionButtons .deleteIcon:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}/*# sourceMappingURL=styleEmployees.css.map */

@@ -1,0 +1,196 @@
+.home {
+  margin: 0 10%;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.home .hero {
+  height: 100vh;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  box-sizing: border-box;
+}
+.home .hero h1 {
+  font-size: 2.5rem;
+  color: #5359cd;
+}
+.home .hero .description {
+  display: flex;
+  flex-direction: column;
+}
+.home .hero .description p {
+  font-size: 1.2rem;
+  line-height: 1.15;
+  color: #333;
+  text-align: center;
+}
+.home .hero .description .ctaButton {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #5359cd;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+.home .hero .description .ctaButton:hover {
+  background: #393dcd;
+}
+.home .hero .heroImage {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .home .hero .heroImage {
+    display: none;
+  }
+  .home .hero .description .ctaButton {
+    padding: 0.5rem 1rem;
+  }
+}
+.home .features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem 0;
+  height: 100vh;
+}
+.home .features .featuresTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #5359cd;
+}
+.home .features .featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem;
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+.home .features .featureGrid .featureCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.home .features .featureGrid .featureCard h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.home .features .featureGrid .featureCard p {
+  font-size: 1rem;
+  color: #333;
+}
+.home .features .featureGrid .featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.home .techStack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem 0;
+  height: 100vh;
+}
+.home .techStack .featuresTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #5359cd;
+}
+.home .techStack .featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem;
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+.home .techStack .featureGrid .featureCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.home .techStack .featureGrid .featureCard h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.home .techStack .featureGrid .featureCard p {
+  font-size: 1rem;
+  color: #333;
+}
+.home .techStack .featureGrid .featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.home .about {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 3rem;
+}
+@media (max-width: 1024px) {
+  .home .about {
+    height: 100%;
+  }
+  .home .about .aboutImage {
+    display: none;
+  }
+}
+.home .about .aboutImage {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home .about .aboutText {
+  text-align: center;
+}
+.home .about .aboutText h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #5359cd;
+}
+@media (max-width: 768px) {
+  .home .about .aboutText h2 {
+    font-size: 2rem;
+  }
+}
+.home .about .aboutText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .home .features .featuresTitle,
+  .home .techStack .featuresTitle {
+    font-size: 2rem;
+  }
+  .home .features .featureGrid,
+  .home .techStack .featureGrid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .home .hero,
+  .home .features,
+  .home .techStack,
+  .home .about {
+    height: 100%;
+  }
+}/*# sourceMappingURL=homePage.css.map */

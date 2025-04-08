@@ -1,0 +1,79 @@
+.register-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #1e1e2f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+.signup-form h1 {
+  margin: 0;
+  text-align: center;
+  color: #5359cd;
+}
+.signup-form label {
+  font-weight: bold;
+  color: #fff;
+}
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.signup-form button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #5359cd;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.signup-form button:hover {
+  background-color: #3b42be;
+}
+.signup-form button.loading {
+  transition: background 0.3s ease;
+  background-color: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.signup-form a {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #5359cd;
+  place-self: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.signup-form a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.signup-form .message {
+  text-align: center;
+}
+.signup-form .message.error {
+  color: red;
+}
+.signup-form .message.success {
+  color: green;
+}/*# sourceMappingURL=style.css.map */

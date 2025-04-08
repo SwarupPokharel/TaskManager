@@ -1,0 +1,15 @@
+.dashboardLayout {
+  display: flex;
+  flex-direction: row;
+  gap: 225px;
+  box-sizing: border-box;
+}
+.dashboardLayout .dashboardMain {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex: 1;
+}
+.dashboardLayout .dashboardMain .children {
+  margin: 0 40px;
+}/*# sourceMappingURL=layoutStyle.css.map */

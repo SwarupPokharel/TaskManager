@@ -1,0 +1,59 @@
+.dashboard {
+  width: 100%;
+  text-align: center;
+  margin: 40px auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+.dashboard h1 {
+  place-content: center;
+  color: #5359cd;
+}
+.dashboard h3 {
+  margin: 0.5rem;
+}
+.dashboard .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+.dashboard .card {
+  font-size: 1rem;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  max-width: 250px;
+  min-width: 200px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+.dashboard .card:hover {
+  transform: scale(1.05);
+}
+.dashboard .card .icon {
+  place-self: center;
+  font-size: 3rem;
+}
+.dashboard .card h4 {
+  font-size: 1.2rem;
+}
+.dashboard .blue {
+  background: linear-gradient(25deg, #162c79 10%, #415499 50%, #162c79 100%);
+}
+.dashboard .green {
+  background: linear-gradient(155deg, #1e7733 10%, #2bb24a 50%, #1e7733 100%);
+}
+.dashboard .orange {
+  background: linear-gradient(155deg, #e89700 10%, #ffbb3c 50%, #e89700 100%);
+}
+.dashboard .red {
+  background: linear-gradient(155deg, #b22b39 10%, #f54658 50%, #b22b39 100%);
+}
+.dashboard .purple {
+  background: linear-gradient(25deg, #543391 10%, #804de0 50%, #543391 100%);
+}
+.dashboard .teal {
+  background: linear-gradient(25deg, #178f6b 10%, #20c997 50%, #178f6b 100%);
+}/*# sourceMappingURL=stylesDashboard.css.map */

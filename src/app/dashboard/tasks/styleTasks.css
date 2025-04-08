@@ -1,0 +1,61 @@
+.taskContainer {
+  padding: 20px 0 0 0;
+  max-width: 1200px;
+}
+.taskContainer .taskGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.taskContainer .taskCard {
+  background: linear-gradient(155deg, #0c0c13 10%, #1e1e2f 50%, #0c0c13 100%);
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  text-decoration: none;
+}
+.taskContainer .taskCard:hover {
+  transform: translateY(-5px);
+}
+.taskContainer .taskCard h3 {
+  margin: 0 0 30px 0;
+  font-size: 18px;
+  text-align: center;
+}
+.taskContainer .taskCard .taskDesc {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.taskContainer .taskCard .assignedTo {
+  font-size: 12px;
+  color: #fff;
+}
+.taskContainer .taskCard .status {
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+.taskContainer .taskCard .pending {
+  background-color: #ffeb3b;
+  color: #856404;
+}
+.taskContainer .taskCard .in-progress {
+  background-color: #2196f3;
+  color: white;
+}
+.taskContainer .taskCard .completed {
+  background-color: #4caf50;
+  color: white;
+}
+.taskContainer .taskCard .assigned {
+  background-color: floralwhite;
+  color: #5359cd;
+}/*# sourceMappingURL=styleTasks.css.map */

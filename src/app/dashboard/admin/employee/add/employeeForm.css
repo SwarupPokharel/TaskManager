@@ -1,0 +1,52 @@
+.formContainer {
+  width: 100%;
+  margin: 40px auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.formContainer .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.formContainer .formGroup {
+  display: flex;
+  flex-direction: column;
+}
+.formContainer .formGroup label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+.formContainer .formGroup input, .formContainer .formGroup select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+.formContainer .formGroup input:focus, .formContainer .formGroup select:focus {
+  outline: none;
+}
+.formContainer .formGroup select {
+  font-size: 0.8rem;
+}
+.formContainer .formGroup select option {
+  font-size: 0.8rem;
+}
+.formContainer .submitButton {
+  padding: 10px 20px;
+  background-color: #5359cd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.formContainer .submitButton:hover {
+  background-color: #3b42be;
+}/*# sourceMappingURL=employeeForm.css.map */

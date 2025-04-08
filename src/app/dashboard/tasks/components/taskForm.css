@@ -1,0 +1,48 @@
+.container {
+  padding: 2rem;
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  text-align: center;
+}
+.container h1 {
+  margin: 0;
+  padding: 0;
+  color: #5359cd;
+}
+
+.taskForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.taskForm label {
+  font-weight: bold;
+  text-align: left;
+}
+.taskForm input,
+.taskForm textarea,
+.taskForm select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.taskForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.taskForm button {
+  padding: 0.75rem;
+  background: #5359cd;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.taskForm button:hover {
+  background: #3b42be;
+}/*# sourceMappingURL=taskForm.css.map */

@@ -98,7 +98,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div className="navbar-container">
+            {/* <div className="navbar-container"> */}
                 <Link href='/' className="logo" onClick={() => window.location.replace("/")}>
                     <Image
                         src='/images/logo2.0.png'
@@ -164,7 +164,7 @@ const Navbar = () => {
                             </div>
                         )}
                 </div>
-            </div>
+            {/* </div> */}
         </nav>
     );
 };

@@ -1,0 +1,72 @@
+.sidenavContainer {
+  position: fixed;
+  width: 225px;
+  height: 100%;
+  background: linear-gradient(155deg, #0c0c13 10%, #1e1e2f 50%, #0c0c13 100%);
+  color: #fff;
+  padding: 20px 0 0 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.sidenavContainer .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.sidenavContainer .user .image {
+  display: flex;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+.sidenavContainer .user .image .userImg {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sidenavContainer .sidenav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+.sidenavContainer .sidenav .sidenavItem {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+.sidenavContainer .sidenav .sidenavItem:hover {
+  border-radius: 5px;
+  background-color: #5359cd;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.sidenavContainer .sidenav .sidenavItem .icons {
+  font-size: 1.5rem;
+}
+.sidenavContainer .sidenav .sidenavItem .navLink {
+  text-decoration: none;
+  color: #fff;
+}
+.sidenavContainer .sidenav .sidenavItem:last-child {
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .sidenavContainer {
+    width: 200px;
+  }
+  .sidenavContainer nav ul li .navLink {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}/*# sourceMappingURL=styleSidenav.css.map */

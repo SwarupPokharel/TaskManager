@@ -1,0 +1,32 @@
+.adminNavbar {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.5rem 2.5rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+}
+.adminNavbar h1 {
+  color: #5359cd;
+}
+.adminNavbar .addButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #5359cd;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.adminNavbar .addButton:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+.adminNavbar .addButton .plusIcon {
+  font-size: 48px;
+}/*# sourceMappingURL=stylesNavbar.css.map */
