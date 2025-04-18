@@ -8,7 +8,7 @@ interface employeeData {
     email: string,
     designation: string,
     address: string,
-    departments: string
+    department: string
 }
 
 interface DepartmentType {
@@ -22,7 +22,7 @@ const UserForm: React.FC = () => {
         email: "",
         designation: "",
         address: "",
-        departments: ""
+        department: ""
     });
 
     const [department, setDepartment] = useState<DepartmentType[]>([]);
@@ -41,7 +41,10 @@ const UserForm: React.FC = () => {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        setFormData({
+            ...formData,
+            [name]: value
+        });
     };
 
     const router = useRouter();
@@ -65,14 +68,14 @@ const UserForm: React.FC = () => {
                 email: "",
                 designation: "",
                 address: "",
-                departments: "",
+                department: "",
             });
             router.push('/dashboard/admin/employee');
         } catch (error) {
             console.log(error instanceof Error ? error.message : "Error while fetching employees: ", error);
         }
     };
-    
+
     return (
         <div className='formContainer'>
             <form onSubmit={handleSubmit} className='form'>
@@ -114,10 +117,10 @@ const UserForm: React.FC = () => {
                     <select
                         id="department"
                         name="department"
-                        value={formData.departments[0] || ""}
+                        value={formData.department || ""}
                         onChange={handleChange}
                     >
-                        <option>Select a Department</option>
+                        <option value="">Select a Department</option>
                         {department.map((dept) => (
                             <option key={dept._id} value={dept.name}>{dept.name}</option>
                         ))}
