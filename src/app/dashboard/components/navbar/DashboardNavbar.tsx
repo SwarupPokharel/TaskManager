@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import AddButton from '@/../public/images/add.svg';
+import BackButton from '@/../public/images/back.svg';
 import Image from "next/image";
 import Link from "next/link";
 import './stylesNavbar.scss';
@@ -73,16 +74,49 @@ export default function DashboardNavbar() {
                 }
             }
         }
+
         if (pathname.startsWith("/dashboard/tasks/") && pathname.split("/").length === 3) {
             return null;
         }
+    }
 
-        // return null;
+    const getBackButton = () => {
+        if (pathname.startsWith("/dashboard/admin/employee/") && pathname.split("/").length === 5) {
+            return (
+                <Link className="backButton" href='/dashboard/admin/employee'>
+                    <div className="button-box">
+                        <span className="button-elem">
+                            <Image src={BackButton} alt="Back Icon" width={28} height={28} />
+                        </span>
+                        <span className="button-elem">
+                            <Image src={BackButton} alt="Back Icon" width={28} height={28} />
+                        </span>
+                    </div>
+                </Link>
+            );
+        }
+        if (pathname.startsWith("/dashboard/tasks") && pathname.split("/").length === 4) {
+            return (
+                <Link className="backButton" href='/dashboard/tasks'>
+                    <div className="button-box">
+                        <span className="button-elem">
+                            <Image src={BackButton} alt="Back Icon" width={28} height={28} />
+                        </span>
+                        <span className="button-elem">
+                            <Image src={BackButton} alt="Back Icon" width={28} height={28} />
+                        </span>
+                    </div>
+                </Link>
+            );
+        }
     }
 
     return (
         <div className="adminNavbar">
-            <h1>{pageTitle}</h1>
+            <div className="button-title">
+                {getBackButton()}
+                <h1>{pageTitle}</h1>
+            </div>
             {getComponent()}
         </div>
     );

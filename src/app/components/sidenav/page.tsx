@@ -5,8 +5,9 @@ import Image from "next/image";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { FaPeopleRoof } from "react-icons/fa6";
 import { BiTask } from "react-icons/bi";
-import { MdLogout } from "react-icons/md";
+import { MdHome, MdLogout } from "react-icons/md";
 import { NextResponse } from "next/server";
+import { AiOutlineHome } from "react-icons/ai";
 import './styleSidenav.scss';
 
 
@@ -68,6 +69,10 @@ const Sidenav: React.FC = () => {
             </div>
 
             <nav className="sidenav">
+                <Link href='/' className="sidenavItem">
+                    <AiOutlineHome className="icons" />
+                    <span>Home</span>
+                </Link>
                 <Link href='/dashboard' className="sidenavItem">
                     <LuLayoutDashboard className="icons" />
                     <span>Dashboard</span>

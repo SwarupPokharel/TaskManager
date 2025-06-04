@@ -33,7 +33,7 @@ const UpdateEmployees = () => {
         console.log(result);
         setEmployee(result.employee);
     }
-    
+
     useEffect(() => {
         fetchOneEmployee();
     }, []);
