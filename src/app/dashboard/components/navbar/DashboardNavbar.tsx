@@ -37,12 +37,17 @@ export default function DashboardNavbar() {
         "/dashboard/tasks/add": { title: "Add Task" },
         "/dashboard/tasks": { title: "Tasks Card" },
     };
+    // if (pathname.startsWith("/dashboard/admin/employee/") && !pageMetadata[pathname]) {
+    //     return "Update Employee";
+    // }
 
-    let pageTitle = "Dashboard";
+    let pageTitle = "";
     if (pageMetadata[pathname]) {
         pageTitle = pageMetadata[pathname].title;
     } else if (pathname.startsWith("/dashboard/tasks/")) {
         pageTitle = "Task Details";
+    } else if (pathname.startsWith("/dashboard/admin/employee/") && pathname.split("/").length === 5) {
+        pageTitle = "Update Employee";
     }
 
     const getComponent = () => {
@@ -71,7 +76,8 @@ export default function DashboardNavbar() {
         if (pathname.startsWith("/dashboard/tasks/") && pathname.split("/").length === 3) {
             return null;
         }
-        return null;
+
+        // return null;
     }
 
     return (

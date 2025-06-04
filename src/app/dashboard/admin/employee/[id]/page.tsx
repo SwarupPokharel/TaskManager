@@ -13,28 +13,30 @@ interface EmployeeData {
 
 const UpdateEmployees = () => {
     const { id } = useParams();
-    const [employee, setEmployee] = useState<EmployeeData>({name: "", email: "", address: "", designation: "", department: ""});
+    const [employee, setEmployee] = useState<EmployeeData>({ name: "", email: "", address: "", designation: "", department: "" });
     const departments = ['Technical', 'Finance', 'Human Resources', 'Marketing', 'Research & Development'];
 
 
-    useEffect(() => {
-        const fetchOneEmployee = async () => {
-            const response = await fetch(`/api/auth/employee/${id}`);
-            if (!response.ok) {
-                return (
-                    <div className='container'>
-                        <div className='card'>
-                            <h1 className='errorTitle'>Employee Not Found</h1>
-                        </div>
+
+    const fetchOneEmployee = async () => {
+        const response = await fetch(`/api/auth/employee/${id}`);
+        if (!response.ok) {
+            return (
+                <div className='container'>
+                    <div className='card'>
+                        <h1 className='errorTitle'>Employee Not Found</h1>
                     </div>
-                );
-            }
-            const result = await response.json();
-            console.log(result);
-            setEmployee(result.employee);
+                </div>
+            );
         }
+        const result = await response.json();
+        console.log(result);
+        setEmployee(result.employee);
+    }
+    
+    useEffect(() => {
         fetchOneEmployee();
-    });
+    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
