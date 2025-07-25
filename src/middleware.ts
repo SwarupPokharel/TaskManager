@@ -25,6 +25,9 @@ export async function middleware(request: NextRequest) {
                     return NextResponse.redirect(new URL("/", request.url));
             }
         }
+        if (role === "user" && request.nextUrl.pathname.startsWith("/dashboard/admin")) {
+            return NextResponse.redirect(new URL("/dashboard/userDashboard", request.url));
+        }
         return NextResponse.next();
 
     } catch (error) {
